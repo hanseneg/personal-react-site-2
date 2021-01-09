@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react'
+import {Switch, Route} from 'react-router-dom'
 
 import './style.css'
 import Header from './Header'
 import Movie from './Movie'
 import Search from './Search'
+import Random from './Random'
+import About from './About'
 
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b" 
 
@@ -55,6 +58,20 @@ function App() {
                     ))
                 )}
             </div>
+            <Switch>
+                <Route path='app'>
+                    <App />
+                </Route>
+                <Route path='app'>
+                    <App />
+                </Route>
+                <Route path='random'>
+                    <Random />
+                </Route>
+                <Route path='about'>
+                    <About />
+                </Route>
+            </Switch>
         </div>
     )
 }
