@@ -43,8 +43,23 @@ function App() {
     }
         
     return (
+        <div>
+            
         <div className="App">
-            <Header />
+            <Header /> 
+            <Switch>
+                    <Route exact path='/'>
+                        <App />
+                    </Route>
+                    <Route path='/random'>
+                        <Random />
+                    </Route>
+                    <Route path='/about'>
+                        <About />
+                    </Route>
+                </Switch> 
+           
+            
             <Search search={search} />
             <p className="App-intro">Find your favorite movie poster!</p>
             <div className="movies">
@@ -58,20 +73,8 @@ function App() {
                     ))
                 )}
             </div>
-            <Switch>
-                <Route path='app'>
-                    <App />
-                </Route>
-                <Route path='app'>
-                    <App />
-                </Route>
-                <Route path='random'>
-                    <Random />
-                </Route>
-                <Route path='about'>
-                    <About />
-                </Route>
-            </Switch>
+            
+        </div>
         </div>
     )
 }
