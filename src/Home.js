@@ -54,7 +54,8 @@ function Home() {
                     movies.map((movie, index) => (
                     <Movie key={`${index}-${movie.Title}`} movie={movie} />
                     ))
-                )}
+                )
+                }
             </div>
 
         </div>

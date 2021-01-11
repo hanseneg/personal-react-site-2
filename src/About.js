@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
     return(
-        <div>
+        <div className='view'>
             <h3>About this Site</h3>
             <p>This site was built with html, css, and react.js.</p>
             <p>Work in Progress</p>
