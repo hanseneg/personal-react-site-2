@@ -1,15 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
-
 
 import './style.css'
-import Header from './Header'
 import Movie from './Movie'
 import Search from './Search'
 
-
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b" 
-
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -44,12 +39,12 @@ function Home() {
         
     return (
         <div className="App">
-            
-            
-           
-            
+        
             <Search search={search} />
-            <p className="App-intro">Find your favorite movie poster!</p>
+
+            <h3 className="App-intro">Find your favorite movie poster!</h3>
+            <p>Here are some cool ones!</p>
+
             <div className="movies">
                 {loading && !errorMessage ? (
                 <span>loading...</span>
@@ -61,6 +56,7 @@ function Home() {
                     ))
                 )}
             </div>
+
         </div>
     )
 }
