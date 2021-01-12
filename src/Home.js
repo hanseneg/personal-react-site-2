@@ -4,7 +4,7 @@ import './style.css'
 import Movie from './Movie'
 import Search from './Search'
 
-const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b" 
+const movieApiUrl = "https://www.omdbapi.com/?s=man&apikey=4a3b711b" 
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -12,7 +12,7 @@ function Home() {
     const [errorMessage, setErrorMessage] = useState(null)
 
     useEffect(() => {
-        fetch(MOVIE_API_URL)
+        fetch(movieApiUrl)
             .then(response => response.json())
             .then(jsonResponse => {
             setMovies(jsonResponse.Search)
@@ -36,10 +36,9 @@ function Home() {
                 }
             })
     }
-        
+
     return (
         <div className="App">
-        
             <Search search={search} />
 
             <h3 className="App-intro">Find your favorite movie poster!</h3>
