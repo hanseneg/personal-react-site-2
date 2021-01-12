@@ -37,6 +37,8 @@ function Random() {
     return(
         <div>
             {randomMovie}
+            <p>Work in Progress</p>
+            <h3>Refresh the page for a surprise!</h3>
             <button onClick={handleRandom}>Random Poster</button>
         </div>
     )
